@@ -34,6 +34,7 @@ else
 end
 =end
 #menggunakan case-when cara-2
+=begin
 bungkus = case year
 when 1894
     "lahir"
@@ -42,5 +43,14 @@ when 1895..1913
 else
     "tidak diketahui"
 end
-
 puts bungkus
+=end
+# kedua cara diatas sama saja
+# kedua cara diatas sebenarnya tersembunyi kode dibawah dibelakang layar
+if 1894 === year # artinya : 1894.===(year),ruby mengijinkan penulisan tanpa titik (khusus method yang berupa operator)
+    "lair"
+elsif 1895..1913 === year # === adalah method class Integer dan Range
+    "ijek cilik" # == mengecek exact value, === mengecek range,mengecek tipe data, mengecek kelas.
+else
+    "tidak diketahui"
+end
