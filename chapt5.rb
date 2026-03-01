@@ -47,10 +47,26 @@ puts bungkus
 =end
 # kedua cara diatas sama saja
 # kedua cara diatas sebenarnya tersembunyi kode dibawah dibelakang layar
+
+=begin
 if 1894 === year # artinya : 1894.===(year),ruby mengijinkan penulisan tanpa titik (khusus method yang berupa operator)
-    "lair"
-elsif 1895..1913 === year # === adalah method class Integer dan Range
-    "ijek cilik" # == mengecek exact value, === mengecek range,mengecek tipe data, mengecek kelas.
+    puts "lair"
+elsif (1895..1913) === year # === adalah method class Integer dan Range
+    puts "ijek cilik" # == mengecek exact value, === mengecek range,mengecek tipe data, mengecek kelas.
 else
-    "tidak diketahui"
+    puts "tidak diketahui"
 end
+=end
+
+mangga = 30
+if 20 < mangga
+    puts "mangga banyak"
+elsif 20 === mangga
+    puts "mangga pas"
+else
+    puts "mangga sedikit"
+end
+
+# format komparasi dengan nilai dulu baru variabel, adalah terbaik pada saat
+# kita melakukan komparasi dengan nilai range, dan pencocokan dengan kelas.
+# selain dari itu, akan lebih mudah dibaca menggunakan format secara umum, yaitu variabel dulu baru nilai.
