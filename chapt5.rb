@@ -58,15 +58,30 @@ else
 end
 =end
 
-mangga = 30
-if 20 < mangga
+=begin
+mangga = 16
+if mangga > 20
     puts "mangga banyak"
-elsif 20 === mangga
+elsif (15..19) === mangga
     puts "mangga pas"
 else
     puts "mangga sedikit"
 end
-
+=end
 # format komparasi dengan nilai dulu baru variabel, adalah terbaik pada saat
 # kita melakukan komparasi dengan nilai range, dan pencocokan dengan kelas.
 # selain dari itu, akan lebih mudah dibaca menggunakan format secara umum, yaitu variabel dulu baru nilai.
+
+# def dan class
+number = 5
+p number.next
+
+frasa = "jokowi is da kink"
+p frasa.length
+
+p number.class
+p frasa.class
+
+# Note :
+# titik (.) adalah operator untuk memanggil method pada suatu objek
+# double colon (::) memanggil class,module, konstanta
