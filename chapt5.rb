@@ -84,4 +84,19 @@ p frasa.class
 
 # Note :
 # titik (.) adalah operator untuk memanggil method pada suatu objek
-# double colon (::) memanggil class,module, konstanta
+# double colon (::) mengakses class,module, konstanta
+
+daftar_konstanta = Object::constants
+# p daftar_konstanta
+
+def wipe_from(sentences)
+    while sentences.include?("(")
+        open = sentences.index( "(" )
+        close = sentences.index(")", open)
+        sentences[open..close] = "" if close
+    end
+end
+
+kalimah = "saya )tidak suka makan) nasi. makanan favorit) saya adalah nasi) goreng"
+wipe_from(kalimah)
+puts kalimah
