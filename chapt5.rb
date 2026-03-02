@@ -88,7 +88,7 @@ p frasa.class
 
 daftar_konstanta = Object::constants
 # p daftar_konstanta
-
+=begin
 def wipe_from(sentences)
     while sentences.include?("(")
         open = sentences.index( "(" )
@@ -96,7 +96,16 @@ def wipe_from(sentences)
         sentences[open..close] = "" if close
     end
 end
+=end
 
-kalimah = "saya )tidak suka makan) nasi. makanan favorit) saya adalah nasi) goreng"
-wipe_from(kalimah)
+kalimah = "saya (tidak) suka makan nasi. makanan (bukan) favorit saya adalah nasi (goreng)"
+#wipe_from(kalimah)
+#puts kalimah
+
+# wipe_from menggunakan regex
+def wipe_of(teks)
+    teks.gsub!(/\s*\(.*?\)/,"")
+end
+
+wipe_of(kalimah)
 puts kalimah
