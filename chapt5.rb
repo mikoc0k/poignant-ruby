@@ -68,6 +68,9 @@ else
     puts "mangga sedikit"
 end
 =end
+
+=begin
+
 # format komparasi dengan nilai dulu baru variabel, adalah terbaik pada saat
 # kita melakukan komparasi dengan nilai range, dan pencocokan dengan kelas.
 # selain dari itu, akan lebih mudah dibaca menggunakan format secara umum, yaitu variabel dulu baru nilai.
@@ -96,7 +99,6 @@ def wipe_from(sentences)
         sentences[open..close] = "" if close
     end
 end
-=end
 
 kalimah = "saya (tidak) suka makan nasi. makanan (bukan) favorit saya adalah nasi (goreng)"
 #wipe_from(kalimah)
@@ -109,3 +111,20 @@ end
 
 wipe_of(kalimah)
 puts kalimah
+
+=end
+
+x = 5
+x = x + 1
+puts x # x = 6
+
+y = "jokowidodol"
+y = y.length
+puts y
+
+z = :include? # nama method bs string bs symbol
+# z = "include?""
+z = "jokowowo makan harta negara".respond_to?(z) # string dicek apakah memiliki method :include?
+puts z # bernilai true
+xx = "halo".respond_to?("include?")
+puts xx
