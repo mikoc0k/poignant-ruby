@@ -114,6 +114,7 @@ puts kalimah
 
 =end
 
+=begin
 x = 5
 x = x + 1
 puts x # x = 6
@@ -128,3 +129,14 @@ z = "jokowowo makan harta negara".respond_to?(z) # string dicek apakah memiliki 
 puts z # bernilai true
 xx = "halo".respond_to?("include?")
 puts xx
+=end
+pres = "jokowi makan besi kalimantan"
+# Penggunaan self
+class String
+    def split_goblok
+        self.split(" ") # self merujuk pada objek yang memanggil method ini,
+        
+    end
+end
+
+puts pres.split_goblok # memanggil method split_goblok pada class String
