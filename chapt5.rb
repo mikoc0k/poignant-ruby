@@ -168,3 +168,4 @@ def mobil.teriak
     puts "brummmm brummmmmm "
 end
 
+puts mobil.teriak
