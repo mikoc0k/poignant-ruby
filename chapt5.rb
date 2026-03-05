@@ -133,13 +133,38 @@ puts xx
 pres = "jokowi-makan-besi-kalimantan"
 # Penggunaan self
 # hal dibawah dinamakan monkey patching, yaitu menambahkan method pada class yang sudah ada, dalam hal ini class String
+
+=begin
 class String
     def split_goblok
         self.split("-") # self merujuk pada objek yang memanggil method ini,
-        
+        # self digunakan saat kita membuat method yang nempel dengan kelas.
     end
 end
 
 print pres.split_goblok # memanggil method split_goblok pada class String
 print "\n"
 print "joko-wiwi".split_goblok
+
+=end
+
+=begin
+
+# monkey patching yang lebih baik. yaitu menggunakan module lalu meng-include nya(attach) ke class yang diinginkan
+module Goblok
+    def split_goblok
+        self.split("-")
+    end
+end
+
+String.include(Goblok) # meng-include module goblok ke class String
+print pres.split_goblok
+=end
+
+# membuat method nempel di objek (singleton)
+
+mobil = "sedan 1700cc"
+def mobil.teriak
+    puts "brummmm brummmmmm "
+end
+
