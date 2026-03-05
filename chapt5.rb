@@ -130,13 +130,16 @@ puts z # bernilai true
 xx = "halo".respond_to?("include?")
 puts xx
 =end
-pres = "jokowi makan besi kalimantan"
+pres = "jokowi-makan-besi-kalimantan"
 # Penggunaan self
+# hal dibawah dinamakan monkey patching, yaitu menambahkan method pada class yang sudah ada, dalam hal ini class String
 class String
     def split_goblok
-        self.split(" ") # self merujuk pada objek yang memanggil method ini,
+        self.split("-") # self merujuk pada objek yang memanggil method ini,
         
     end
 end
 
-puts pres.split_goblok # memanggil method split_goblok pada class String
+print pres.split_goblok # memanggil method split_goblok pada class String
+print "\n"
+print "joko-wiwi".split_goblok
