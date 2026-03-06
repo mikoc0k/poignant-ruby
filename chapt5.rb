@@ -162,10 +162,22 @@ print pres.split_goblok
 =end
 
 # membuat method nempel di objek (singleton)
-
+=begin
 mobil = "sedan 1700cc"
 def mobil.teriak
     puts "brummmm brummmmmm "
 end
 
 puts mobil.teriak
+=end
+
+# membuat kode tantangan dari gemini
+
+wordss = "antek asing nyepong biji tramp pedoc"
+class String
+    def subs_char
+        self.gsub(" ","-")
+    end
+end
+
+print wordss.subs_char
