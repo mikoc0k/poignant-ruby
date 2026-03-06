@@ -181,3 +181,13 @@ class String
 end
 
 print wordss.subs_char
+
+# kita dapat menulis kode oneliner
+module Chara
+    def subs_chara;self.gsub("-"," "); end
+end
+
+String.include(Chara)
+print "\n"
+print wordss.subs_char
+print "\n"
