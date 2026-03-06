@@ -189,5 +189,5 @@ end
 
 String.include(Chara)
 print "\n"
-print wordss.subs_char
+print wordss.subs_chara
 print "\n"
