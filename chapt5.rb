@@ -172,7 +172,7 @@ puts mobil.teriak
 =end
 
 # membuat kode tantangan dari gemini
-
+=begin
 wordss = "antek asing nyepong biji tramp pedoc"
 class String
     def subs_char
@@ -191,3 +191,21 @@ String.include(Chara)
 print "\n"
 print wordss.subs_chara
 print "\n"
+=end
+
+=begin
+# objek
+class Toastybear < Object; end # 
+p Toastybear.class
+
+# kode diatas identik dengan :
+class Koastbear ;
+end
+
+=end
+
+# pewarisan sifat
+class ArrayBaru < Array
+end
+
+print ArrayBaru.superclass # Array : mengecek siapa superclass atau class parent
